@@ -4,11 +4,12 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * The Main class is the entry point of the application that reads list of names from a file, 
- * sorts the names by given name and last name, writes the sorted names to a file and prints it to the console 
- * The application accepts one argument from command-line which is the name of the file that includes 
- * the unsorted names.  
- * The file of the unsorted name must be located in the following path "src/resources/file.txt"
+ * The Main class is the entry point of the application that reads list of names
+ * from a file, sorts the names by given name and last name, writes the sorted
+ * names to a file and prints it to the console The application accepts one
+ * argument from command-line which is the name of the file that includes the
+ * unsorted names. The file of the unsorted name must be located in the
+ * following path "src/resources/file.txt"
  *
  */
 public class Main {
