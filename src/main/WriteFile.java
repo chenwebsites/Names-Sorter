@@ -13,11 +13,11 @@ import java.util.List;
 
 public class WriteFile {
 
-	public static void writeNamesToFile(List<String> names) {
+	public static void writeNamesToFile(List<NameObj> names) {
 		try (BufferedWriter writerBuffer = new BufferedWriter(new FileWriter("src/resources/sorted-names-list.txt"))) {
 
-			for (String name : names) {
-				writerBuffer.write(name);
+			for (NameObj name : names) {
+				writerBuffer.write(name.getGivenName() +" " + name.getLastName());
 				writerBuffer.newLine();
 			}
 
