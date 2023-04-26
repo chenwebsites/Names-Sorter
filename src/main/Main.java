@@ -25,12 +25,13 @@ public class Main {
 		List<String> names = ReadFile.readNamesFromFile("src/resources/" + fileName);
 
 		// NameSorter class exists in the package but currently not in use
-		// since now I store the list of name in an object, sort it and prints it to a file and in the console. 
-		//NameSorter.byGivenName(names);
-		//NameSorter.byLastName(names);
-		
+		// since now I store the list of names as an object, sort it and prints it to a
+		// file and on the console.
+		// NameSorter.byGivenName(names);
+		// NameSorter.byLastName(names);
+
 		List<NameObj> sortedNamesObj = NameObjSorter.sortNamesObj(names);
-		
+
 		WriteFile.writeNamesToFile(sortedNamesObj);
 
 		for (NameObj name : sortedNamesObj) {
