@@ -24,12 +24,14 @@ public class Main {
 
 		List<String> names = ReadFile.readNamesFromFile("src/resources/" + fileName);
 
-		NameSorter.byGivenName(names);
-		NameSorter.byLastName(names);
+		//NameSorter.byGivenName(names);
+		//NameSorter.byLastName(names);
+		
+		List<NameObj> sortedNamesObj = NameObjSorter.sortNamesObj(names);
+		
+		WriteFile.writeNamesToFile(sortedNamesObj);
 
-		WriteFile.writeNamesToFile(names);
-
-		for (String name : names) {
+		for (NameObj name : sortedNamesObj) {
 			System.out.println(name);
 		}
 	}
