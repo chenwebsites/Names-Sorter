@@ -1,2 +1,13 @@
 language: java
-jdk: openjdk17
+jdk:
+  - openjdk17
+
+branches:
+  only:
+    - main
+
+script:
+  - javac -cp src src/main/*.java
+  - java -cp bin main/Main
+
+
