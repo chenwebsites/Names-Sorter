@@ -36,5 +36,4 @@ public class NameObj {
 		return givenName + " " + lastName;
 	}
 
-
 }

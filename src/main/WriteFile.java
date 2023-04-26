@@ -17,7 +17,7 @@ public class WriteFile {
 		try (BufferedWriter writerBuffer = new BufferedWriter(new FileWriter("src/resources/sorted-names-list.txt"))) {
 
 			for (NameObj name : names) {
-				writerBuffer.write(name.getGivenName() +" " + name.getLastName());
+				writerBuffer.write(name.getGivenName() + " " + name.getLastName());
 				writerBuffer.newLine();
 			}
 
