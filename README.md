@@ -13,7 +13,7 @@ If a file name will not be provided in the command-line as an argument, a defaul
 ## How to run the program 
 1. Clone the repository to your local machine and extract it. 
 2. Create a file with unsorted names -> one full name per line. (ex. testFile.txt)
-3. Locate the file in src/resources/testFile.txt
+3. Store the file in src/resources/testFile.txt
 4. Open terminal/bash/etc.. and nevigate to the root directory of the project. 
 5. In order to keep the folder clean, the next command will compile the .java file and create the .class files in the bin/main directory. 
 6. Execute the following command:     javac -d bin src/main/*java  
