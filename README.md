@@ -16,7 +16,7 @@ If a file name will not be provided in the command-line as an argument, a defaul
 3. Store the file in src/resources/testFile.txt
 4. Open terminal/bash/etc.. and nevigate to the root directory of the project. 
 5. In order to keep the folder clean, the next command will compile the .java file and create the .class files in the bin/main directory. 
-6. Execute the following command:     javac -d bin src/main/*java  
-7. then execute:      java -cp bin main/Main testFile.txt
-8. Optional: execute java -cp bin main/Main and a default unsorted-names-list.txt will be executed. 
+6. Execute the following command:    " javac -d bin src/main/*java " 
+7. then execute:     " java -cp bin main/Main testFile.txt "
+8. Optional: execute:  " java -cp bin main/Main " and a default unsorted-names-list.txt will be executed. 
 9. The program will print the sorted names on the console and will create a file name: src/resources/sorted-names-list.txt  
