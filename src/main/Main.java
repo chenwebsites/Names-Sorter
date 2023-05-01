@@ -1,6 +1,5 @@
 package main;
 
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -14,7 +13,7 @@ import java.util.List;
  */
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		String fileName;
 		if (args.length > 0 && !args[0].equalsIgnoreCase("null")) {
 			fileName = args[0];
