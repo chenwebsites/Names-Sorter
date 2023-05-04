@@ -1,6 +1,6 @@
 # Names-Sorter
 
-This is a simple program written in Java 17, includes 5 java classes: Main, NameSorter, ReadFile, WriteFile and a NameSorterTest class.
+This is a simple program written in Java 17, includes 5 java classes: Main,NameObjSorter, NameSorter-(NOT IN USE), ReadFile, WriteFile and a NameSorterTest class.
 This program takes a file with a list of unsorted names, order them by them by last name, then by the given names.
 The program creates a text file with the sorted names in the path: src/resources/sorted-names-list.txt. 
 If the file is already exists, it will overwrite it. 
