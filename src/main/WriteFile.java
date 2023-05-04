@@ -14,10 +14,12 @@ import java.util.List;
 public class WriteFile {
 
 	public static void writeNamesToFile(List<NameObj> names) {
-		try (BufferedWriter writerBuffer = new BufferedWriter(new FileWriter("src/resources/sorted-names-list.txt"))) {
+		try (BufferedWriter writerBuffer = new BufferedWriter(
+				new FileWriter(Constants.PATH.concat(Constants.SORTED_NAMES_LIST_FILE)))) {
 
 			for (NameObj name : names) {
-				writerBuffer.write(name.getGivenName() + " " + name.getLastName());
+				writerBuffer.write(String.join(Constants.ONE_SPACE, name.getGivenName(), name.getLastName()));
+				// writerBuffer.write(name.getGivenName() + " " + name.getLastName());
 				writerBuffer.newLine();
 			}
 

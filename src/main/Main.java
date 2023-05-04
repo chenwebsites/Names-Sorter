@@ -15,13 +15,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		String fileName;
-		if (args.length > 0 && !args[0].equalsIgnoreCase("null")) {
+		if (args.length > 0 && !args[0].equalsIgnoreCase(Constants.NULL)) {
 			fileName = args[0];
 		} else {
-			fileName = "unsorted-names-list.txt";
+			fileName = Constants.UNSORTED_NAMES_LIST_FILE;
 		}
 
-		List<String> names = ReadFile.readNamesFromFile("src/resources/" + fileName);
+		List<String> names = ReadFile.readNamesFromFile(Constants.PATH.concat(fileName));
 
 		// NameSorter class exists in the package but currently not in use
 		// since now I store the list of names as an object, sort it and prints it to a
