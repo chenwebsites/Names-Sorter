@@ -13,10 +13,10 @@ import java.util.List;
  */
 public class Main {
 
-	private static ReadFile readFileInterface = new ReadFileImpl();
-	private static WriteFile writeFileInterface = new WriteFileImpl();
-	private static NameObjParser nameObjParserInterface = new NameObjParserImpl();
-	private static NameObjSorter nameObjSorterInterface = new NameObjSorterImpl();
+	private static ReadFile readFile = new ReadFileImpl();
+	private static WriteFile writeFile = new WriteFileImpl();
+	private static NameObjParser nameObjParser = new NameObjParserImpl();
+	private static NameObjSorter nameObjSorter = new NameObjSorterImpl();
 	 
 
 	public static void main(String[] args) {
@@ -27,10 +27,10 @@ public class Main {
 			fileName = Constants.UNSORTED_NAMES_LIST_FILE;
 		}
 
-		List<String> names = readFileInterface.readNamesFromFile(Constants.PATH.concat(fileName));
-		List<NameObj> prasedNamesObj = nameObjParserInterface.parseNamestoList(names);
-		List<NameObj> sortedNamesObj = nameObjSorterInterface.sortNames(prasedNamesObj);
-		writeFileInterface.writeNamesToFile(sortedNamesObj);
+		List<String> names = readFile.readNamesFromFile(Constants.PATH.concat(fileName));
+		List<NameObj> prasedNamesObj = nameObjParser.parseNamestoList(names);
+		List<NameObj> sortedNamesObj = nameObjSorter.sortNames(prasedNamesObj);
+		writeFile.writeNamesToFile(sortedNamesObj);
 
 		for (NameObj name : sortedNamesObj) {
 			System.out.println(name);
