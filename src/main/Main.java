@@ -13,6 +13,12 @@ import java.util.List;
  */
 public class Main {
 
+	private static ReadFile readFileInterface = new ReadFileImpl();
+	private static WriteFile writeFileInterface = new WriteFileImpl();
+	private static NameObjParser nameObjParserInterface = new NameObjParserImpl();
+	private static NameObjSorter nameObjSorterInterface = new NameObjSorterImpl();
+	 
+
 	public static void main(String[] args) {
 		String fileName;
 		if (args.length > 0 && !args[0].equalsIgnoreCase(Constants.NULL)) {
@@ -21,17 +27,10 @@ public class Main {
 			fileName = Constants.UNSORTED_NAMES_LIST_FILE;
 		}
 
-		List<String> names = ReadFile.readNamesFromFile(Constants.PATH.concat(fileName));
-
-		// NameSorter class exists in the package but currently not in use
-		// since now I store the list of names as an object, sort it and prints it to a
-		// file and on the console.
-		// NameSorter.byGivenName(names);
-		// NameSorter.byLastName(names);
-
-		List<NameObj> sortedNamesObj = NameObjSorter.sortNamesObj(names);
-
-		WriteFile.writeNamesToFile(sortedNamesObj);
+		List<String> names = readFileInterface.readNamesFromFile(Constants.PATH.concat(fileName));
+		List<NameObj> prasedNamesObj = nameObjParserInterface.parseNamestoList(names);
+		List<NameObj> sortedNamesObj = nameObjSorterInterface.sortNames(prasedNamesObj);
+		writeFileInterface.writeNamesToFile(sortedNamesObj);
 
 		for (NameObj name : sortedNamesObj) {
 			System.out.println(name);
